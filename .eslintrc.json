@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "site/",
+    "site_backup_*/",
+    "public/",
+    "dist/",
+    "coverage/",
+    "**/*.min.js",
+    "**/*.generated.*"
+  ]
+}

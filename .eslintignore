@@ -1,0 +1,13 @@
+# No lints en dependencias ni artefactos
+node_modules/
+.next/
+out/
+site/
+site_backup_*/
+public/
+dist/
+coverage/
+
+# Archivos minificados o generados
+**/*.min.js
+**/*.generated.*
