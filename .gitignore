@@ -8,18 +8,26 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Env y secretos
+# Builds exportados / estáticos generados
+site/
+site_backup_*/
+**/_next/
+**/*.map
+
+# Entornos / secretos
 .env
 .env.*
 !.env.example
 
-# SO / editor
+# SO / editores
 .DS_Store
 *.swp
 *.swo
 .idea/
 .vscode/
 
-# Builds
-*.tar
-*.zip
+# Backups locales y ficheros basura
+*.bak.*
+*.BAD
+*.BROKEN-*
+*.NAV*
