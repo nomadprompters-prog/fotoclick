@@ -197,13 +197,10 @@ export default function FotosclickLanding() {
               Fotógrafo con enfoque cinematográfico y una obsesión sana por la luz. Creo imágenes honestas, con composición limpia y emoción real. Trabajo en toda España y me desplazo para proyectos internacionales.
             </p>
             <ul className="text-neutral-700 text-sm space-y-2">
-  <li><Link href="/">Home</Link></li>
-  <li><Link href="/galeria">Portfolio</Link></li>
-  <li><Link href="/nosotros">Nosotros</Link></li>
-  <li><Link href="/servicios">Servicios</Link></li>
-  <li><Link href="/opiniones">Opiniones</Link></li>
-  <li><Link href="/contacto">Contacto</Link></li>
-</ul>
+              <li>• Entrega en 7–14 días en galería privada</li>
+              <li>• Contrato claro, cesión de derechos definida</li>
+              <li>• Opción de álbum y fine art printing</li>
+            </ul>
           </div>
         </div>
       </section>

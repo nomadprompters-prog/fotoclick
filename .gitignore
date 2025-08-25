@@ -1,8 +1,25 @@
+# Node / Next.js
 node_modules/
 .next/
 out/
-site/
-site_backup_*/
-.vscode/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env y secretos
+.env
+.env.*
+!.env.example
+
+# SO / editor
 .DS_Store
-*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Builds
+*.tar
+*.zip
