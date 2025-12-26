@@ -1,0 +1,69 @@
+
+/* DEFINTIVE ARTALE STUDIO SYNC */
+
+/* 1. Hide Legacy Logo & Icons */
+#logo_right_button, 
+.logo_wrapper img, 
+#logo_wrapper .social_wrapper,
+.mobile_menu_wrapper { 
+}
+
+/* 2. Style Artale Text Logo */
+.logo_wrapper { 
+}
+.logo_wrapper::before {
+    content: "THE ARTALE STUDIO";
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    letter-spacing: -1.5px;
+    margin-bottom: 50px;
+}
+
+/* 3. Remove White Vertical Dividers & Gaps */
+.header_side_menu_wrapper, 
+#side_menu_wrapper, 
+.header_side_menu_inner,
+#wrapper,
+.gallery_horizontal_wrapper {
+}
+
+/* Force black background on EVERYTHING to avoid white peaks */
+body, 
+#wrapper, 
+.header_side_menu_wrapper, 
+#side_menu_wrapper,
+#horizontal_gallery,
+.transparent.horizontal,
+.footer_before_widget {
+}
+
+/* 4. Fix Full Bleed & Sidebar Width */
+.header_side_menu_wrapper {
+}
+
+#horizontal_gallery { 
+}
+
+/* 5. Hide Home Page Titles (Cleanup) */
+.page_title_wrapper, 
+#page_content_wrapper .inner .sidebar_content h1,
+.post_header {
+}
+
+/* 6. Typography Refinement */
+#main_menu li a {
+}
+#main_menu li a:hover, 
+#main_menu li.current-menu-item a {
+}
+
+/* 7. Gallery Layout Padding Removal */
+#horizontal_gallery_wrapper td { 
+}
+.gallery_image_wrapper {
+}
+
