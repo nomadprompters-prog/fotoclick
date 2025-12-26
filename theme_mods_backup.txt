@@ -1,0 +1,304 @@
+array (
+  'nav_menu_locations' => 
+  array (
+    'primary-menu' => 31,
+    'side-menu' => 31,
+    'top-menu' => NULL,
+  ),
+  'custom_css_post_id' => 4694,
+  'template' => 'photography',
+  'options' => 
+  array (
+    'site_icon' => '0',
+    'nav_menus_created_posts' => 
+    array (
+    ),
+  ),
+  'wp_css' => '
+/* Artale Studio Branding & Layout */
+.logo_wrapper::before {
+    content: "THE ARTALE STUDIO";
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+#main_menu li a {
+}
+.header_side_menu_wrapper {
+}
+.gallery_horizontal_wrapper, #horizontal_gallery, .transparent.horizontal {
+}
+body, #wrapper, .header_side_menu_wrapper {
+}
+/* Full bleed fix */
+',
+  'tg_header_font' => 'Playfair Display',
+  'tg_body_font' => 'Inter',
+  'tg_menu_font' => 'Inter',
+  'tg_sidemenu_font' => 'Inter',
+  0 => false,
+  'tg_menu_padding' => '22',
+  'tg_blog_slider' => false,
+  'tg_blog_slider_layout' => '3cols-slider',
+  'tg_blog_slider_cat' => '26',
+  'tg_full_nocover' => false,
+  'tg_full_arrow' => false,
+  'tg_portfolio_recent' => true,
+  'tg_portfolio_next_prev' => false,
+  'tg_portfolio_url' => 'http://themes.themegoods.com/photography/demo2/portfolio/portfolio-fullscreen/',
+  'tg_lightbox_skin' => 'metro-black',
+  'tg_lightbox_thumbnails' => 'no_thumbnail',
+  'tg_lightbox_opacity' => '95',
+  'tg_full_random' => false,
+  'tg_menu_layout' => 'leftmenu',
+  'tg_fixed_menu' => false,
+  'tg_main_menu' => false,
+  'tg_fixed_menu_color' => 'dark',
+  'tg_topbar' => false,
+  'tg_frame' => true,
+  'tg_menu_font_color' => '#000000',
+  'tg_menu_hover_font_color' => '#cf9353',
+  'tg_menu_active_font_color' => '#cf9353',
+  'tg_menu_border_color' => '#000000',
+  'tg_menu_bg_color' => 'rgba(51,51,51, 1)',
+  'tg_retina_logo' => 'http://themes.themegoods.com/photography/demo2/wp-content/uploads/2015/10/logo@2x_white.png',
+  'tg_retina_transparent_logo' => 'http://themes.themegoods.com/photography/demo2/wp-content/uploads/2015/10/logo@2x_white.png',
+  'tg_content_bg_color' => '#000000',
+  'tg_font_color' => '#000000',
+  'tg_link_color' => '#000000',
+  'tg_hover_link_color' => '#adadad',
+  'tg_h1_font_color' => '#000000',
+  'tg_hr_color' => '#999999',
+  'tg_page_title_font_color' => '#ffffff',
+  'tg_page_header_bg_color' => '#f5f3f0',
+  'tg_page_tagline_font_color' => '#ffffff',
+  'tg_submenu_font_color' => '#ffffff',
+  'tg_submenu_border_color' => '#000000',
+  'tg_submenu_bg_color' => '#000000',
+  'tg_megamenu_header_color' => '#000000',
+  'tg_megamenu_border_color' => '#e1e1e1',
+  'tg_submenu_hover_bg_color' => '#adadad',
+  'tg_sidebar_font_color' => '#000000',
+  'tg_sidebar_link_color' => '#000000',
+  'tg_sidebar_hover_link_color' => '#adadad',
+  'tg_sidebar_title_color' => '#000000',
+  'tg_input_bg_color' => '#1b271f',
+  'tg_input_font_color' => '#ffffff',
+  'tg_input_border_color' => '#999999',
+  'tg_input_focus_color' => '#cf9353',
+  'tg_submenu_hover_font_color' => '#555555',
+  'tg_menu_search_input_color' => '#f5f3f0',
+  'tg_menu_search_font_color' => '#000000',
+  'tg_sidemenu_font_color' => '#000000',
+  'tg_sidemenu_font_hover_color' => '#cf9353',
+  'tg_sidemenu_bg_color' => '#000000',
+  'tg_blog_cat_font_color' => '#000000',
+  'tg_shop_price_font_color' => '#ffffff',
+  'tg_favicon' => 'http://themes.themegoods.com/photography/demo2/wp-content/uploads/2015/10/TG-Thumb.png',
+  'tg_blog_content_sharing' => true,
+  'tg_skin' => 'dark',
+  'tg_sidemenu_bg' => '#000000',
+  'tg_menu_bg' => '#000000',
+  'tg_topbar_bg' => '#222222',
+  'tg_submenu_bg' => '#222222',
+  'tg_topbar_font_color' => '#ffffff',
+  'tg_custom_fonts' => 
+  array (
+    0 => 
+    array (
+      'font_name' => '',
+      'font_url' => '',
+      'font_weight' => '',
+      'font_style' => '',
+    ),
+  ),
+  'tg_body_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'line-height' => '1.4',
+    'variant' => 'regular',
+    'font-size' => '26px',
+    'letter-spacing' => '-1px',
+  ),
+  'tg_header_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'line-height' => '1.7',
+    'letter-spacing' => '0px',
+    'text-transform' => 'none',
+  ),
+  'tg_blockquote_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'letter-spacing' => '0px',
+  ),
+  'tg_input_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'font-size' => '24px',
+  ),
+  'tg_label_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'variant' => '500',
+    'font-size' => '16px',
+    'text-transform' => 'none',
+  ),
+  'tg_label_font_color' => '#000000',
+  'tg_button_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'font-size' => '18px',
+    'letter-spacing' => '0px',
+    'variant' => '500',
+  ),
+  'tg_button_bg_color' => '#cf9353',
+  'tg_button_font_color' => '#ffffff',
+  'tg_button_hover_bg_color' => '#1b271f',
+  'tg_button_hover_font_color' => '#cf9353',
+  'tg_button_hover_border_color' => '#cf9353',
+  'photography_header_content' => 'content',
+  'tg_menu_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'variant' => '500',
+    'text-transform' => 'uppercase',
+    'font-size' => '16px',
+  ),
+  'tg_transparent_menu_bg_opacity' => '0',
+  'tg_submenu_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'font-size' => '14px',
+    'text-transform' => 'uppercase',
+    'variant' => '600',
+  ),
+  'tg_sidemenu_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'font-size' => '22px',
+    'variant' => 'regular',
+    'text-transform' => 'uppercase',
+    'letter-spacing' => '0px',
+  ),
+  'tg_menu_search' => false,
+  'tg_menu_search_instant' => false,
+  'tg_page_title_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'letter-spacing' => '0px',
+  ),
+  'tg_page_title_bg_height' => '50',
+  'tg_page_title_bg_vertical_alignment' => 'middle',
+  'tg_page_title_bg_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'letter-spacing' => '0px',
+  ),
+  'tg_page_tagline_alignment' => 'below',
+  'tg_header_builder_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'letter-spacing' => '0px',
+  ),
+  'tg_page_tagline_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'font-size' => '16px',
+    'variant' => '500',
+  ),
+  'tg_page_tagline_font_style' => 'normal',
+  'tg_widget_title_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'font-size' => '24px',
+    'letter-spacing' => '0px',
+  ),
+  'photography_footer_content' => 'content',
+  'tg_footer_font_color' => '#ffffff',
+  'tg_footer_link_color' => '#ffffff',
+  'tg_footer_hover_link_color' => '#cf9353',
+  'tg_footer_copyright_font_color' => '#ffffff',
+  'tg_footer_copyright_link_color' => '#ffffff',
+  'tg_footer_copyright_hover_link_color' => '#cf9353',
+  'tg_footer_copyright_right_area' => 'menu',
+  'tg_footer_copyright_typography' => 
+  array (
+    'font-family' => 'DM Sans',
+    'variant' => 'regular',
+    'text-transform' => 'uppercase',
+    'font-size' => '13px',
+  ),
+  'tg_gallery_title_typography' => 
+  array (
+    'font-family' => 'Poppins',
+    'font-size' => '20px',
+    'text-transform' => 'uppercase',
+    'variant' => '600',
+  ),
+  'tg_lightbox_enable_caption' => false,
+  'tg_modulobox_thumbnails' => 'no_thumbnail',
+  'tg_portfolio_title_font_spacing' => '0',
+  'tg_blog_archive_layout' => 'blog_f',
+  'tg_blog_category_layout' => 'blog_f',
+  'tg_blog_tag_layout' => 'blog_f',
+  'tg_portfolio_title_font_transform' => 'none',
+  'tg_blog_title_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'letter-spacing' => '-1px',
+    'text-transform' => 'none',
+  ),
+  'tg_blog_single_post_title_typography' => 
+  array (
+    'font-family' => 'Forum',
+    'variant' => 'regular',
+    'font-size' => '75px',
+    'letter-spacing' => '-1px',
+    'text-transform' => 'none',
+    'line-height' => '1.1',
+  ),
+  'tg_blog_display_author' => false,
+  'tg_blog_display_related' => false,
+  'photography_header_content_default' => '24',
+  'photography_sticky_header_content_default' => '24',
+  'photography_transparent_header_content_default' => '24',
+  'photography_footer_content_default' => '39',
+  'tg_portfolio_target_blank' => false,
+  'tg_fullmenu_default' => '4813',
+  'tg_sidemenu_icon_size' => '11',
+  'tg_footer_copyright_totop_bg' => '#1b271f',
+  'tg_fullmenu_effect' => 'fade',
+  'tg_fullmenu_bg' => '#ffffff00',
+  'tg_button_border_color' => '#cf9353',
+  'tg_footer_bg' => '#1b271f',
+  'tg_footer_border_color' => '#cccccc',
+  'tg_footer_copyright_bg_color' => '#1b271f',
+  'tg_blog_header_bg' => false,
+  'tg_blog_title_in_content' => true,
+  'tg_h5_size' => '32',
+  'tg_h6_size' => '28',
+  'tg_h1_size' => '48',
+  'tg_h2_size' => '44',
+  'tg_h3_size' => '40',
+  'tg_h4_size' => '36',
+  'tg_input_border_radius' => '10',
+  'tg_button_border_radius' => '25',
+  'tg_appointment_font_color' => '#ffffff',
+  'tg_appointment_calendar_font_color' => '#ffffff',
+  'tg_appointment_date_month_bg_color' => '#324438',
+  'tg_appointment_reservation_bg_color' => '#324438',
+  'tg_input_style' => 'classic',
+)

@@ -1,0 +1,110 @@
+/* ARTALE STUDIO CUSTOM CSS - ULTRA AGGRESSIVE */
+
+/* 1. HIDE DEFAULT LOGO IMAGE */
+html body .logo_wrapper img, 
+html body #logo_wrapper img,
+html body .mobile_menu_wrapper .logo_wrapper img,
+html body .header_side_menu_inner .logo_wrapper img {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
+}
+
+/* 2. ARTALE STUDIO TEXT LOGO */
+html body .logo_wrapper::before {
+    content: \'THE ARTALE STUDIO\';
+    display: block !important;
+    font-family: \'Playfair Display\', serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: #ffffff !important;
+    letter-spacing: -1.5px !important;
+    margin-bottom: 40px !important;
+    text-transform: none !important;
+    white-space: pre !important;
+}
+
+/* 3. MENU TYPOGRAPHY (INTER, WHITE, SMALL) */
+html body #main_menu li a, 
+html body .side_menu_wrapper li a, 
+html body .mobile_menu_wrapper li a,
+html body .header_side_menu_inner li a {
+    color: #ffffff !important;
+    font-family: \'Inter\', sans-serif !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    font-weight: 400 !important;
+    padding: 10px 0 !important;
+    background: none !important;
+}
+
+html body #main_menu li a:hover, 
+html body .side_menu_wrapper li.current-menu-item a {
+    color: #999999 !important;
+}
+
+/* 4. SIDEBAR ADDRESS INJECTION */
+html body .header_side_menu_inner::after {
+    content: \'FOTOSCLICK\\A Carrer de Mallorca, 272\\A 08037 Barcelona\\A +34 932 15 15 15\\A hello@fotosclick.com\';
+    display: block !important;
+    white-space: pre-wrap !important;
+    color: #888888 !important;
+    font-family: \'Inter\', sans-serif !important;
+    font-size: 10px !important;
+    line-height: 2 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-top: 100px !important;
+}
+
+/* 5. BLACKOUT CORE & ELEMENTOR */
+html, body, #wrapper, 
+.header_side_menu_wrapper, 
+.header_side_menu_inner,
+.sidebar_content,
+#horizontal_gallery,
+.gallery_horizontal_wrapper,
+.page_content_wrapper,
+#page_content_wrapper,
+.post_content_wrapper,
+.ppb_wrapper,
+.elementor,
+.elementor-section,
+.elementor-column,
+.elementor-column-wrap,
+.elementor-widget-wrap,
+.elementor-background-overlay,
+.elementor-widget-container {
+    background-color: #000000 !important;
+    background-image: none !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 6. TYPOGRAPHY OVERWRITES */
+h1, h2, h3, h4, h5, h6, .ppb_title, .elementor-heading-title {
+    color: #ffffff !important;
+    font-family: \'Playfair Display\', serif !important;
+}
+
+body, p, span, li, a {
+    font-family: \'Inter\', sans-serif !important;
+}
+
+/* Clean up sidebar borders and glows */
+.header_side_menu_wrapper {
+    box-shadow: none !important;
+    border-right: none !important;
+    width: 340px !important;
+}
+#horizontal_gallery {
+    left: 340px !important;
+    width: calc(100% - 340px) !important;
+}
+
