@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 
-export const metadata = {
-  title: "Galería — Fotosclick",
-  description: "Índice de categorías fotográficas.",
-};
+// Metadata moved to layout or removed for client component compatibility.
+
 
 const CATEGORIES = [
   { name: "Autor", slug: "autor" },

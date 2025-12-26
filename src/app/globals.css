@@ -1,22 +1,36 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap');
 
 /* Theme (Tailwind v4) */
 @theme {
-  --color-background: #0b0b0b;
-  --color-foreground: #f4f4f5;
-  --color-muted: #a1a1aa;
-  --color-accent: #e0b973;
-  --color-border: #1f1f22;
+  --color-background: #000000;
+  --color-sidebar: #000000;
+  --color-foreground: #ffffff;
+  --color-muted: #888888;
+  --color-accent: #ffffff;
+  --color-border: #111111;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 /* Base */
 html, body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
-html { scroll-behavior: smooth; }
-::selection { background: #000; color: #fff; }
 
-/* Full-bleed helper para secciones a ancho completo */
-.hero-fullbleed { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: #fff; color: #000; }
+
+/* Custom Utilities */
+.sidebar-link {
+  @apply text-sm uppercase tracking-widest text-[#888] hover:text-white transition-colors duration-300;
+}
+

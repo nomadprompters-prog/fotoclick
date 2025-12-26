@@ -1,240 +1,75 @@
 "use client";
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Camera, Mail, Phone, Calendar, ChevronRight, Instagram, Facebook, ImageIcon } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
-// --- Fake data (replace with real images later) ---
-const GALLERY = [
+const IMAGES = [
   {
     src: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600',
-    alt: 'Boda íntima al atardecer',
-    tag: 'Bodas',
+    alt: 'Editorial Fashion',
+    category: 'Portrait'
   },
   {
     src: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600',
-    alt: 'Retrato editorial con luz natural',
-    tag: 'Retrato',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1505935428862-770b6f24f629?q=80&w=1600',
-    alt: 'Producto en estudio con reflejos',
-    tag: 'Producto',
+    alt: 'High Fashion Concept',
+    category: 'Fashion'
   },
   {
     src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1600',
-    alt: 'Moda y editorial',
-    tag: 'Moda',
+    alt: 'Classic Portraiture',
+    category: 'Creative'
   },
   {
-    src: 'https://images.unsplash.com/photo-152097591?' ,
-    alt: 'Lifestyle',
-    tag: 'Lifestyle',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-152097577?' ,
-    alt: 'Arquitectura y espacios',
-    tag: 'Arquitectura',
-  },
-]
+    src: 'https://images.unsplash.com/photo-1505935428862-770b6f24f629?q=80&w=1600',
+    alt: 'Modern Aesthetic',
+    category: 'Editorial'
+  }
+];
 
-const HERO = {
-  title: 'Fotografía que respira emoción',
-  subtitle: 'Retrato | Bodas | Editorial',
-  ctaPrimary: 'Solicitar presupuesto',
-  ctaSecondary: 'Ver portfolio',
-}
-
-const SERVICES = [
-  {
-    icon: <Camera className="w-6 h-6"/>,
-    title: 'Reportajes de boda',
-    desc: 'Cobertura completa, preboda y postboda. Entrega en galería privada y álbum artesanal opcional.',
-  },
-  {
-    icon: <ImageIcon className="w-6 h-6"/>,
-    title: 'Retrato & editorial',
-    desc: 'Retratos naturales con dirección de poses y estilismo ligero. Iluminación en localización o estudio.',
-  },
-  {
-    icon: <Calendar className="w-6 h-6"/>,
-    title: 'Eventos & marcas',
-    desc: 'Cobertura de eventos, producto y campañas para marcas con estética limpia y actual.',
-  },
-]
-
-export default function FotosclickLanding() {
-  const [navSolid, setNavSolid] = useState(false)
-  useEffect(() => {
-    const onScroll = () => setNavSolid(window.scrollY > 8)
-    onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-neutral-50 text-neutral-900">
-      {/* Navbar */}
-      <header className={`sticky top-0 z-50 transition ${navSolid ? 'bg-white/80 backdrop-blur border-b border-neutral-200' : 'bg-transparent'}`}>
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-            <div className="w-9 h-9 rounded-2xl bg-black text-white grid place-content-center"><Camera className="w-5 h-5"/></div>
-            <span className="text-lg">Fotosclick</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-7 text-sm">
-            <a href="#portfolio" className="hover:opacity-80">Portfolio</a>
-            <a href="#servicios" className="hover:opacity-80">Servicios</a>
-            <a href="#sobre-mi" className="hover:opacity-80">Sobre mí</a>
-            <a href="#contacto" className="hover:opacity-80">Contacto</a>
-          </nav>
-          <a href="#contacto" className="hidden md:inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-black text-white text-sm hover:bg-neutral-800">
-            <Mail className="w-4 h-4"/> Pedir fecha
-          </a>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section id="top" className="relative overflow-hidden">
-        <div className="absolute inset-0">
+    <div className="flex h-screen overflow-x-auto snap-x snap-mandatory no-scrollbar bg-black cursor-crosshair">
+      {IMAGES.map((image, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: index * 0.2 }}
+          className="relative min-w-[50vw] h-full snap-start overflow-hidden group border-r border-[#111]"
+        >
           <img
-            src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=2400"
-            alt="Hero"
-            className="w-full h-full object-cover"
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-black/50"/>
-        </div>
-        <div className="relative max-w-6xl mx-auto px-4 py-24 md:py-36 text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold tracking-tight max-w-3xl"
-          >
-            {HERO.title}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl"
-          >
-            {HERO.subtitle}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-8 flex flex-col sm:flex-row gap-3"
-          >
-            <a href="#contacto" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white text-black text-sm font-medium hover:bg-neutral-100">
-              {HERO.ctaPrimary} <ChevronRight className="w-4 h-4"/>
-            </a>
-            <a href="#portfolio" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-white/30 text-white text-sm font-medium hover:bg-white/10">
-              {HERO.ctaSecondary}
-            </a>
-          </motion.div>
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-700 hover:backdrop-blur-sm" />
 
-      {/* Portfolio */}
-      <section id="portfolio" className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-end justify-between gap-6 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Portfolio seleccionado</h2>
-            <div className="flex items-center gap-4 text-sm text-neutral-600">
-              <a className="hover:text-black" href="#">Todo</a>
-              <a className="hover:text-black" href="#">Bodas</a>
-              <a className="hover:text-black" href="#">Retrato</a>
-              <a className="hover:text-black" href="#">Editorial</a>
-            </div>
+          <div className="absolute bottom-16 left-16 overflow-hidden">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.3 + 0.5 }}
+            >
+              <h3 className="text-[10px] sm:text-xs uppercase tracking-[0.5em] text-white/50 mb-4 font-sans">{image.category}</h3>
+              <h2 className="text-4xl sm:text-6xl font-serif text-white tracking-tighter leading-none">{image.alt}</h2>
+            </motion.div>
           </div>
+        </motion.div>
+      ))}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {GALLERY.map((f, i) => (
-              <motion.figure
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group relative overflow-hidden rounded-3xl bg-neutral-200"
-              >
-                <img src={f.src} alt={f.alt} className="w-full h-72 md:h-80 object-cover transition group-hover:scale-[1.04]" />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 text-white text-sm bg-gradient-to-t from-black/60 to-transparent flex items-center justify-between">
-                  <span className="font-medium">{f.alt}</span>
-                  <span className="px-2 py-0.5 rounded-full bg-white/15 text-white/90 text-xs">{f.tag}</span>
-                </figcaption>
-              </motion.figure>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Visual spacer at the end */}
+      <div className="min-w-[10vw] flex items-center justify-center">
+        <div className="w-[1px] h-32 bg-[#222]" />
+      </div>
 
-      {/* Servicios */}
-      <section id="servicios" className="py-16 md:py-24 bg-white border-y border-neutral-200">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-10">Servicios</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {SERVICES.map((s, i) => (
-              <div key={i} className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6 md:p-7 shadow-sm hover:shadow-md transition">
-                <div className="w-10 h-10 rounded-2xl bg-black text-white grid place-content-center mb-4">
-                  {s.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sobre mí */}
-      <section id="sobre-mi" className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600" alt="Fotógrafo" className="w-full h-80 object-cover rounded-3xl"/>
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">Hola, soy Sergio</h2>
-            <p className="text-neutral-700 leading-relaxed mb-4">
-              Fotógrafo con enfoque cinematográfico y una obsesión sana por la luz. Creo imágenes honestas, con composición limpia y emoción real. Trabajo en toda España y me desplazo para proyectos internacionales.
-            </p>
-            <ul className="text-neutral-700 text-sm space-y-2">
-  <li><Link href="/">Home</Link></li>
-  <li><Link href="/galeria">Portfolio</Link></li>
-  <li><Link href="/nosotros">Nosotros</Link></li>
-  <li><Link href="/servicios">Servicios</Link></li>
-  <li><Link href="/opiniones">Opiniones</Link></li>
-  <li><Link href="/contacto">Contacto</Link></li>
-</ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA contacto */}
-      <section id="contacto" className="py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">¿Reservamos fecha?</h2>
-          <p className="mt-3 text-neutral-700">Cuéntame tu idea y te envío propuesta en 24h.</p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:hola@fotosclick.es" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-black text-white text-sm font-medium hover:bg-neutral-800"><Mail className="w-4 h-4"/> hola@fotosclick.es</a>
-            <a href="tel:+34999999999" className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-neutral-300 text-sm font-medium hover:bg-neutral-100"><Phone className="w-4 h-4"/> +34 999 999 999</a>
-          </div>
-          <div className="mt-6 flex items-center justify-center gap-4 text-neutral-500">
-            <a href="#" className="hover:text-black" aria-label="Instagram"><Instagram className="w-5 h-5"/></a>
-            <a href="#" className="hover:text-black" aria-label="Facebook"><Facebook className="w-5 h-5"/></a>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-10 border-t border-neutral-200 text-sm text-neutral-600">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} Fotosclick. Todos los derechos reservados.</p>
-          <nav className="flex items-center gap-6">
-            <a href="#" className="hover:text-black">Aviso legal</a>
-            <a href="#" className="hover:text-black">Privacidad</a>
-            <a href="#" className="hover:text-black">Cookies</a>
-          </nav>
-        </div>
-      </footer>
+      <style jsx global>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </div>
-  )
+  );
 }
